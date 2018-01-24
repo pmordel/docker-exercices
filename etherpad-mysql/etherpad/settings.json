@@ -39,21 +39,26 @@
   //The Type of the database. You can choose between dirty, postgres, sqlite and mysql
   //You shouldn't use "dirty" for for anything else than testing or development
   //"dbType" : "dirty",
+    "dbType" : "mysql",
   //the database specific settings
-  //"dbSettings" : {
-  //                 "filename" : "var/dirty.db"
-  //               },
+  "dbSettings" : {
+                   "filename" : "var/dirty.db"
+                    "user" : "etherpad",
+                    "host"    : "mysql",
+                    "password": "ethercat",
+                    "database": "ethercat",
+                 },
 
-  /* An Example of MySQL Configuration*/
+  /* An Example of MySQL Configuration
   "dbType" : "mysql",
    "dbSettings" : {
-                    "user"    : "root",
-                    "host"    : "localhost",
-                    "password": "",
-                    "database": "store",
+                    "user"    : "etherpad",
+                    "host"    : "mysql",
+                    "password": "ethercat",
+                    "database": "ethercat",
                     "charset" : "utf8mb4"
                   },
-
+*/
   //the default text of a pad
   "defaultPadText" : "Welcome to Etherpad!\n\nThis pad text is synchronized as you type, so that everyone viewing this page sees the same text. This allows you to collaborate seamlessly on documents!\n\nGet involved with Etherpad at http:\/\/etherpad.org\n",
 
