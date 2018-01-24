@@ -24,11 +24,15 @@ etherpad:
 mysql:
     # use the official mariadb image from the docker store
     # https://store.docker.com/images/mariadb
-    image: mariadb:10.1
+    image: mariadb:10.3
 
     # TODO: environement variables
     environment:
-        FOO: "BAR"
+        FOO:"BAR"
+        MYSQL_ROOT_PASSWORD: etherpad_root
+        MYSQL_DATABASE: etherpad
+        MYSQL_USER: etherpad
+        MYSQL_PASSWORD: etherpad
 
     volumes:
         # store mysql data into the 'dev-etherpad-db'
